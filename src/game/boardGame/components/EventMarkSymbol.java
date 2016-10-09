@@ -1,0 +1,5 @@
+package game.boardGame.components;
+
+public enum EventMarkSymbol {
+	BATTLE, TRAVEL, HIDE, FRIENDSHIP, EVENT, EVENT_OR_3_CARDS, EVENT_OR_CARD_SHIELD_EMBLEM, SAURON_OR_ACTIVE_PLAYER_2_STEPS_TO_DARKENSS
+}
