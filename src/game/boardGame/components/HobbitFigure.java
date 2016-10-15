@@ -17,23 +17,23 @@ public class HobbitFigure extends LotrFigure{
 	
 	
 	public void die() {
-		// TODO Auto-generated method stub
+		// TODO die method
 		
 	}
 
 	public void wearRing() {
-		// TODO Auto-generated method stub
+		// TODO wearRing
 		
 	}
 
 	public void takeOffRing() {
-		// TODO Auto-generated method stub
+		// TODO takeOffRIng
 		
 	}
 
 
 	public void move(int steps) {
-		// TODO Auto-generated method stub
+		// TODO move
 		
 	}
 	

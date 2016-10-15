@@ -1,11 +1,12 @@
 package game.components.senarios.board;
 
-import enums.RegionCardEnum;
+import enums.RegionCards;
+import game.boardGame.components.cards.RegionCard;
 
 public class RegionCardFactory {
 
-	public static Object getCard(RegionCardEnum card) {
-		// TODO Auto-generated method stub
+	public static RegionCard getCard(RegionCards card) {
+		// TODO implement static getCard method
 		return null;
 	}
 

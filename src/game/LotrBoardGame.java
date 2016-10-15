@@ -5,6 +5,9 @@ import java.util.Random;
 import java.util.Stack;
 
 import enums.ActivityCardType;
+import game.boardGame.components.LotrDice;
+import game.boardGame.components.LotrFigure;
+import game.boardGame.components.Sauron;
 import game.boardGame.components.Shield;
 import game.components.player.LotrPlayer;
 
@@ -39,32 +42,32 @@ public class LotrBoardGame {
 		indexToActivityCardTypeMapping.put(4, ActivityCardType.BALADER);
 	}
 	public LotrPlayer getActivePlayer() {
-		// TODO Auto-generated method stub
+		// TODO Refactor after design
 		return null;
 	}
 
 	public int getNumberOfRemainingShields() {
-		// TODO Auto-generated method stub
+		// TODO Refactor afer design
 		return 0;
 	}
 
 	public Shield revealShield(int pick) {
-		// TODO Auto-generated method stub
+		// TODO Refactor afer design
 		return null;
 	}
 
 	public int getNumberOfPlayers() {
-		// TODO Auto-generated method stub
+		// TODO Refactor afer design
 		return 0;
 	}
 
 	public LotrPlayer[] getPlayers() {
-		// TODO Auto-generated method stub
+		// TODO Refactor afer design
 		return null;
 	}
 
 	public void distributeHobbitCards(LotrPlayer aPlayer, int i) {
-		// TODO Auto-generated method stub
+		// TODO Refactor afer design
 
 	}
 	// kind of 'bad' method
@@ -81,6 +84,13 @@ public class LotrBoardGame {
 			}
 		}
 		utils.Util.shuffleArray(hobbitCards, this.rand);
+	}
+	public LotrDice getDice() {
+		return null;
+	}
+	public Sauron getSauron() {
+		// TODO return a reference to the sauron objet instance
+		return null;
 	}
 
 }

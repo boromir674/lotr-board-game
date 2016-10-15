@@ -18,19 +18,19 @@ public class LotrDice {
 
 		}, ONE_BLACK_DOT {
 			public LotrCommand getLotrCommand(LotrGame game) {
-				return new MoveCharacter(game.getLotrGameManager().getActivePlayer().getFigure(), 1);
+				return new MoveCharacter(game.getState().getActivePlayer().getFigure(), 1);
 			}
 		}, TWO_BLACK_DOTS {
 			public LotrCommand getLotrCommand(LotrGame game) {
-				return new MoveCharacter(game.getLotrGameManager().getActivePlayer().getFigure(), 2);
+				return new MoveCharacter(game.getState().getActivePlayer().getFigure(), 2);
 			}
 		}, THREE_BLACK_DOTS {
 			public LotrCommand getLotrCommand(LotrGame game) {
-				return new MoveCharacter(game.getLotrGameManager().getActivePlayer().getFigure(), 3);
+				return new MoveCharacter(game.getState().getActivePlayer().getFigure(), 3);
 			}
 		}, EYE_OF_SAURON {
 			public LotrCommand getLotrCommand(LotrGame game) {
-				return new MoveCharacter(game.getLotrGameManager().getSauron(), -1);
+				return new MoveCharacter(game.getState().getSauron(), -1);
 			}
 		}, TWO_CARDS {
 			public LotrCommand getLotrCommand(LotrGame game) {
@@ -42,9 +42,7 @@ public class LotrDice {
 		public abstract LotrCommand getLotrCommand(LotrGame aLotrGame);
 	}
 	private static HashMap<LotrDiceSide, LotrCommand> symbolToCommandMapping;
-	
 	private static final RandomEnum<LotrDiceSide> r = new RandomEnum<LotrDiceSide>(LotrDiceSide.class);
-
 	private static class RandomEnum<E extends Enum<LotrDiceSide>> {
 		private final E[] values;
 		public RandomEnum(Class<E> token) {
@@ -54,20 +52,25 @@ public class LotrDice {
 			return values[rand.nextInt(values.length)];
 		}
 	}
-
-	private Random random;
-
-	private LotrGame game;
-
-	public LotrDice (LotrGame aLotrGame) {
-		game = aLotrGame;
-	}
-	
 	private LotrCommand produceCommand(LotrDiceSide result) {
 		return result.getLotrCommand(game);
 	}
-
 	public LotrCommand throwMe() {
 		return this.produceCommand(r.random(this.game.getRandom()));
 	}
+
+	private Random random;
+	private static LotrDice instance;
+	private LotrGame game;
+
+	private LotrDice (LotrGame aLotrGame) {
+		game = aLotrGame;
+	}
+	public static LotrDice getInstance() {
+		if (instance == null) {
+			//return new LotrDice(aLotrGame)
+		}
+		return null;
+	}
+	
 }

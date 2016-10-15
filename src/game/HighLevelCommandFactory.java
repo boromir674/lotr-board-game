@@ -43,7 +43,7 @@ public class HighLevelCommandFactory {
 		return new ThrowDice(game.getState().getActivePlayer()); 
 	}
 	public static LotrCommand activePlayerPickHiddenShield() {
-		//TODO
+		//TODO Implement the method to return a "active player pick face-down shield command"
 		//int pick = game.getRandom().nextInt(game.getState().getNumberOfRemainingShields());
 		return null;//new GiveShieldToPlayer(game.getState().getActivePlayer(), game.getState().revealShield(pick)); 
 	}
@@ -62,14 +62,21 @@ public class HighLevelCommandFactory {
 		case SMALL_SHIELD:
 			return new GiveShieldToPlayer(game.getState().getActivePlayer(), 1);
 		case BIG_SHIELD:
-			return null; //TODO
-		//case CARD:
-			//return new GiveCardToPlayer(game.getState().getActivePlayer(), aCard);
+			return null; //TODO Implement first selectBigShieldCommand and instantiate here afterwards
 		case DICE:
 			return new ThrowDice(game.getState().getActivePlayer());
-		case EMBLEM:
-			return new GiveEmblemToPlayer(game.getState().getActivePlayer(), anEmblem)
+		case RING:
+			return new GiveEmblemToPlayer(game.getState().getActivePlayer(), EmblemSymbol.RING);
+		case HEART:
+			return new GiveEmblemToPlayer(game.getState().getActivePlayer(), EmblemSymbol.HEART);
+		case SUN:
+			return new GiveEmblemToPlayer(game.getState().getActivePlayer(), EmblemSymbol.SUN);
+		case CARD:
+			break; //TODO Implement data model, respective LotrCommand and then instatiate here
+		case HEAL:
+			return new MoveCharacter(game.getState().getActivePlayer().getFigure(), -1);
 		}
+		return null;
 	}
 	
 }

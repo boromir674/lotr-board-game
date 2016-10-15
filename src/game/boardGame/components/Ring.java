@@ -1,10 +1,19 @@
 package game.boardGame.components;
 
 public class Ring {
-
-	public static Ring getInstance() {
-		// TODO Auto-generated method stub
-		return null;
+	
+	private static Ring instance;
+	
+	private Ring() {
 	}
+	
+	public static Ring getInstance() {
+		if (instance == null)
+			return new Ring();
+		else
+			return instance;
+	}
+	
+	// TODO implement Ring class
 
 }

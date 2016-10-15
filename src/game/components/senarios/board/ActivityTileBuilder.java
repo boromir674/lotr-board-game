@@ -19,12 +19,11 @@ public class ActivityTileBuilder implements TileBuilder{
 
 	@Override
 	public void renderTile() {
-		// TODO Auto-generated method stub
-		
+		this.tile = new EmptyTile();
 	}
 
 	public ActivityTile getActivityTile(EmblemSymbol emblem) {
-		// TODO Auto-generated method stub
+		//TODO Decide to keep or not the whole builder pattern
 		return null;
 	}
 	

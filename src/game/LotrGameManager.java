@@ -25,19 +25,12 @@ public class LotrGameManager {
 		aCommand.execute();
 	}
 
-	public int getNumberOfPlayers() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 	public LotrPlayer getActivePlayer() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.game.getState().getActivePlayer();
 	}
 
 	public Sauron getSauron() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.game.getState().getSauron();
 	}
 	
 	

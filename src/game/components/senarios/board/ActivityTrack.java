@@ -5,13 +5,12 @@ import game.boardGame.components.LotrPointer;
 
 public class ActivityTrack extends Track{
 	
+	public ActivityTrack(EventTile[] tiles2) {
+		super(tiles2);
+	}
+
 	private LotrPointer pointer;
 	private ActivitySymbol activity;
-	
-	public ActivityTrack (ActivityTile[] tiles, ActivitySymbol anActivitySymbol) {
-		super(tiles);
-		this.activity = anActivitySymbol;
-	}
 	
 	public void movePointer(int steps) {
 		pointer.moveForward();

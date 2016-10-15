@@ -21,29 +21,28 @@ public class HobbitProperty {
 	}
 
 	private static HobbitProperty getFattyBolgerProperty() {
-		// TODO Auto-generated method stub
+		// TODO Design
 		return null;
 	}
 
 	private static HobbitProperty getMerryProperty() {
-		// TODO Auto-generated method stub
+		// TODO Design
 		return null;
 	}
 
 	private static HobbitProperty getPippinProperty() {
-		// TODO Auto-generated method stub
+		// TODO Design
 		return null;
 	}
 
 	private static HobbitProperty getSamProperty() {
 		return null;
-		// TODO Auto-generated method stub
+		// TODO Design
 		
 	}
-
 	private static HobbitProperty getFrodoProperty() {
 		return null;
-		// TODO Auto-generated method stub
+		// TODO Design
 		
 	}
 

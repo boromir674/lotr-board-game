@@ -9,7 +9,7 @@ public class EventMark {
 	}
 	
 	public void reveal() {
-		// TODO Auto-generated method stub
+		// TODO Decide how to model hidden/face-up
 	}
 
 }

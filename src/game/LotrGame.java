@@ -39,18 +39,16 @@ public class LotrGame {
 	}
 
 	public Stack<HobbitCard> getHobbitCardsStack() {
-		// TODO Auto-generated method stub
+		// TODO stack encapsulation of hobbit cards
 		return null;
 	}
 
 	public LotrPlayer[] getPlayers() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.players;
 	}
 
 	public LotrDice getDice() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.state.getDice();
 	}
 	
 }

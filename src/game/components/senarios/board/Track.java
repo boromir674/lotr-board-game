@@ -9,9 +9,5 @@ public abstract class Track {
 		this.tiles = tiles;
 		this.length = this.tiles.length;
 	}
-
-	public Track(EventTile[] tiles2) {
-		// TODO Auto-generated constructor stub
-	}
 	
 }
