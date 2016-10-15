@@ -32,7 +32,6 @@ public class HighLevelCommandFactory {
 	public HighLevelCommandFactory(LotrGame aLotrGame) {
 		game = aLotrGame;
 	}
-	
 	public static LotrCommand giveItemToActivePlayer(EmblemSymbol emblem) {
 		return new GiveEmblemToPlayer(game.getState().getActivePlayer(), emblem);
 	}
