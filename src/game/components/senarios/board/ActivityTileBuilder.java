@@ -7,23 +7,24 @@ import game.components.senarios.EmblemSymbol;
 public class ActivityTileBuilder implements TileBuilder{
 	
 	private LotrGame game;
-	private LotrPlayer setPlayer;
+	private Tile tile;
 	
-	public ActivityTileBuilder() {
+	public ActivityTileBuilder(LotrGame aLotrGame) {
+		this.game = aLotrGame;
 	}
 	
-	@Override
-	public void setGame(LotrGame aGame) {
-		this.game = aGame;
-	}
-
-	@Override
-	public void setPlayer(LotrPlayer aPlayer) {
-		this.setPlayer = aPlayer;
-	}
-
-	@Override
 	public ActivityTile getActivityTile() {
+		return null;
+	}
+
+	@Override
+	public void renderTile() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public ActivityTile getActivityTile(EmblemSymbol emblem) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 	

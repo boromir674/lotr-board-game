@@ -2,16 +2,16 @@ package game.components.senarios.board;
 
 import commands.LotrCommand;
 
-public class ActivityTile extends TileDecorator{
+public class ActivityTile {
 	
-	public ActivityTile(EmptyTile anEmptyTile) {
-		super(anEmptyTile);
-		// TODO Auto-generated constructor stub
+	private ActivityTileType type;
+	
+	public ActivityTile(ActivityTileType type) {
+		this.type = type;
 	}
 
-	public ActivityTile() {
-	}
 	
-	public void createCommand() {
+	public LotrCommand getCommand() {
+		return null;
 	}
 }

@@ -4,5 +4,5 @@ import commands.LotrCommand;
 
 public interface Tile {
 	
-	public LotrCommand getCommand(); 
+	public LotrCommand getCommand();
 }

@@ -1,30 +1,25 @@
 package game.components.senarios.board;
 
 import game.LotrGame;
+import game.components.senarios.EmblemSymbol;
 
 public class ActivityTileFactory {
 
 	private ActivityTileBuilder builder;
 	private LotrGame game;
 
-	public ActivityTileFactory(LotrGame aLotrGame, ActivityTileBuilder builder) {
+	public ActivityTileFactory(LotrGame aLotrGame) {
 		this.game = aLotrGame;
-		this.builder = builder;
+		this.builder = new ActivityTileBuilder(this.game);
 	}
 
-	public ActivityTile constructCardTile() {
-		builder.setGame(game);
-		builder.setPlayer(game.getState().getActivePlayer());
-		return builder.getActivityTile();
+	public ActivityTile constructTile(EmblemSymbol emblem) {
+		return builder.getActivityTile(emblem);
 	}
 	public ActivityTile constructEmblemTile() {
-		builder.setGame(game);
-		builder.setPlayer(game.getState().getActivePlayer());
 		return builder.getActivityTile();
 	}
 	public ActivityTile constructShieldTile() {
-		builder.setGame(game);
-		builder.setPlayer(game.getState().getActivePlayer());
 		return builder.getActivityTile();
 	}
 
