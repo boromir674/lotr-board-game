@@ -6,14 +6,11 @@ public class HobbitFigure extends LotrFigure{
 	
 	public final static byte HOBBITS_STARTING_POSITIONS = 0;
 	
-	private LotrCharacter hobbit;
-	//private HobbitProperty property;
-	
-	public HobbitFigure(LotrCharacter aHobbitCharacter) {
-		super(HOBBITS_STARTING_POSITIONS);
-		this.hobbit = aHobbitCharacter;
-		//this.property = HobbitProperty.getHobbitProperty(aHobbitCharacter);
+	public HobbitFigure(LotrCharacter hobbit) {
+		super(hobbit);
 	}
+
+	//private HobbitProperty property;
 	
 	
 	public void die() {
@@ -31,10 +28,4 @@ public class HobbitFigure extends LotrFigure{
 		
 	}
 
-
-	public void move(int steps) {
-		// TODO move
-		
-	}
-	
 }

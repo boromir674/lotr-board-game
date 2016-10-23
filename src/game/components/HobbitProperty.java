@@ -16,6 +16,9 @@ public class HobbitProperty {
 			return getMerryProperty();
 		case FATTY_BOLGER:
 			return getFattyBolgerProperty();
+		case SAURON:
+			// TODO Decide for having a Sauron property or not
+		return null;
 		}
 		return null;
 	}

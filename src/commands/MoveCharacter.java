@@ -1,20 +1,23 @@
 package commands;
 
-import game.boardGame.components.LotrFigure;
+import enums.LotrCharacter;
+import game.LotrGameManager;
 
 public class MoveCharacter implements LotrCommand{
 	
-	private LotrFigure figure;
+	private LotrGameManager manager;
+	private LotrCharacter character;
 	private int steps;
 	
-	public MoveCharacter(LotrFigure figure, int steps) {
-		this.figure = figure;
+	public MoveCharacter(LotrGameManager aLotrGameManager, LotrCharacter aLotrCharacter, int steps) {
+		this.manager = aLotrGameManager;
+		this.character = aLotrCharacter;
 		this.steps = steps;
 	}
 	
 	@Override
 	public void execute() {
-		this.figure.move(steps);
+		this.manager.moveFigure(this.character, steps);
 	}
 
 }

@@ -50,30 +50,30 @@ public class HighLevelCommandFactory {
 		return new GiveShieldToPlayer(game.getState().getActivePlayer(), 1);
 	}
 	public static LotrCommand healActivePlayer() {
-		return new MoveCharacter(game.getState().getActivePlayer().getFigure(), -1);
+		return new MoveCharacter(game.getLotrGameManager(), game.getActivePlayer(), -1);
 	}
 	public static LotrCommand healPlayer(LotrPlayer aLotrPlayer, int steps) {
-		return new MoveCharacter(game.getState().getActivePlayer().getFigure(), -steps);
+		return new MoveCharacter(game.getLotrGameManager(), game.getActivePlayer(), -steps);
 	}
 	
 	public static LotrCommand getTileCommand(ActivityTileType type) {
 		switch (type) {
 		case SMALL_SHIELD:
-			return new GiveShieldToPlayer(game.getState().getActivePlayer(), 1);
+			return GiveAShieldToActivePlayer();
 		case BIG_SHIELD:
 			return null; //TODO Implement first selectBigShieldCommand and instantiate here afterwards
 		case DICE:
-			return new ThrowDice(game.getState().getActivePlayer());
+			return activePlayerThrowDice();
 		case RING:
-			return new GiveEmblemToPlayer(game.getState().getActivePlayer(), EmblemSymbol.RING);
+			return giveItemToActivePlayer(EmblemSymbol.RING);
 		case HEART:
-			return new GiveEmblemToPlayer(game.getState().getActivePlayer(), EmblemSymbol.HEART);
+			return giveItemToActivePlayer(EmblemSymbol.HEART);
 		case SUN:
-			return new GiveEmblemToPlayer(game.getState().getActivePlayer(), EmblemSymbol.SUN);
+			return giveItemToActivePlayer(EmblemSymbol.SUN);
 		case CARD:
 			break; //TODO Implement data model, respective LotrCommand and then instatiate here
 		case HEAL:
-			return new MoveCharacter(game.getState().getActivePlayer().getFigure(), -1);
+			return healActivePlayer();
 		}
 		return null;
 	}

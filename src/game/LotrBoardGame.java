@@ -2,12 +2,10 @@ package game;
 
 import java.util.HashMap;
 import java.util.Random;
-import java.util.Stack;
 
 import enums.ActivityCardType;
+import enums.LotrCharacter;
 import game.boardGame.components.LotrDice;
-import game.boardGame.components.LotrFigure;
-import game.boardGame.components.Sauron;
 import game.boardGame.components.Shield;
 import game.components.player.LotrPlayer;
 
@@ -86,10 +84,6 @@ public class LotrBoardGame {
 		utils.Util.shuffleArray(hobbitCards, this.rand);
 	}
 	public LotrDice getDice() {
-		return null;
-	}
-	public Sauron getSauron() {
-		// TODO return a reference to the sauron objet instance
 		return null;
 	}
 

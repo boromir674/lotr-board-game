@@ -3,6 +3,7 @@ package game;
 import java.util.Random;
 import java.util.Stack;
 
+import enums.LotrCharacter;
 import game.boardGame.components.LotrDice;
 import game.boardGame.components.cards.HobbitCard;
 import game.components.player.LotrPlayer;
@@ -49,6 +50,11 @@ public class LotrGame {
 
 	public LotrDice getDice() {
 		return this.state.getDice();
+	}
+
+	public LotrCharacter getActivePlayer() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }
