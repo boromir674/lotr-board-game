@@ -1,5 +1,6 @@
 package commands;
 
+import enums.LotrCharacter;
 import game.components.player.LotrPlayer;
 
 public class ThrowDice implements LotrCommand {
@@ -8,6 +9,10 @@ public class ThrowDice implements LotrCommand {
 	
 	public ThrowDice(LotrPlayer aPlayer) {
 		player = aPlayer;
+	}
+
+	public ThrowDice(LotrCharacter activePlayer) {
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
