@@ -7,8 +7,9 @@ import enums.LotrCharacter;
 import game.boardGame.components.LotrDice;
 import game.boardGame.components.cards.HobbitCard;
 import game.components.player.LotrPlayer;
+import highLevelModels.Game;
 
-public class LotrGame {
+public class LotrGame extends Game{
 	
 	private LotrPlayer[] players;
 	private int difficulty;

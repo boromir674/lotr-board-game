@@ -1,4 +1,4 @@
-package game;
+package highLevelModels;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,6 +6,7 @@ import java.util.List;
 
 import commands.LotrCommand;
 import enums.LotrCharacter;
+import game.LotrGame;
 import game.boardGame.components.HobbitFigure;
 import game.components.player.LotrPlayer;
 import game.exceptions.LotrCharacterAlreadyExistsException;
